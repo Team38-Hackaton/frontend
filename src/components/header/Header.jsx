@@ -6,16 +6,16 @@ const Header = () => {
     <header class={styles.header}>
 
       <div className={styles.logo}>
-
+        <img src='./logo.png'></img>
       </div>
 
       <div className={styles.menu}>
         <div className={styles.avatar}>
-        
+          
         </div>
 
-        <Link className={styles.button} to='/profile'>Профиль</Link>
-        <Link className={styles.button} to='/logout'>Выход</Link>
+        <Link className={styles.button} to='/profile'>В профиль</Link>
+        <Link className={styles.button} to='/logout'>Выйти</Link>
       </div>
     </header>
   )

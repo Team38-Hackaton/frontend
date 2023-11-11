@@ -6,7 +6,6 @@ import Gameboard from '../gameboard/Gameboard';
 const Main = () => {
   return(
     <div class={styles.container}>
-      Ты сейчас на главной странице.
       <Header />
       <Gameboard />
       <Footer />
