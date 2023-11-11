@@ -11,6 +11,7 @@
 }
 
 .header {
+  font-size: 1.5em;
   margin: 0;
   padding: 0 0 20px 0;
   color: var(--grey-text);
@@ -27,22 +28,35 @@
 }
 
 .credits {
-  padding-top: 20px;
+  padding: 20px 0;
+}
+
+.credits_header {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
 }
 
 .links {
+  font-size: 1em;
   margin: 0;
-  padding: 0;
+  padding: 5px 0 0 0;
   box-sizing: border-box;
-  display: flex;
-  
-  /* grid-template-columns: max-content auto min-content;
-  grid-template-rows: 1fr; */
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: 1fr; 
 }
 
 .item {
   margin: 0;
   padding: 0;
+  font-size: 1em;
   text-decoration: none;
   color: var(--text);
   opacity: 1;
