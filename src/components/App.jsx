@@ -3,6 +3,7 @@ import './App.css';
 import Profile from './profile/Profile';
 import Main from './main/Main';
 import NotFound from './notFound/NotFound';
+import Register from './register/Register';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Main/>} />
         <Route path='/profile' element={<Profile/>} />
+        <Route path='/register' element={<Register />} />
         <Route path="/error-404" element={<NotFound />} />
         <Route path="*" element={ <Navigate to="/error-404" /> }/>
       </Routes>
