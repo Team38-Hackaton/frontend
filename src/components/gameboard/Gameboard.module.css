@@ -8,13 +8,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  width: 100%;
 }
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 12px 0;
 }
 
 .steps {

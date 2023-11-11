@@ -11,7 +11,7 @@ const Register = ({onRegister}) => {
 
       <section className="container">
           <div className="login-container">
-              <div className="circle circle-one"></div>
+              {/* <div className="circle circle-one"></div> */}
               <div className="form-container">
                   <img src={mascot} alt="illustration" className="illustration" />
                   <h1 className="opacity">РЕГИСТРАЦИЯ</h1>
@@ -27,7 +27,7 @@ const Register = ({onRegister}) => {
                     <Link to='/login'>Войти</Link>
                   </div>
               </div>
-              <div className="circle circle-two"></div>
+              {/* <div className="circle circle-two"></div> */}
           </div>
         <div className="theme-btn-container"></div>
         <Link to='/'>Вернуться на главную</Link>

@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className={styles.aboutHackaton}>
           <p className={styles.header}>Ссылки</p>
-          <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>Деплой</Link><p></p>
+          <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>Деплой</Link><span> и </span>
           <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>GitHub</Link>
         </div>
       </div>
