@@ -1,27 +1,30 @@
+html {
+  --text: #343270;
+}
+
 .footer {
   margin: 0;
   padding: 79px 0 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--disabled-text);
   font-size: 14px;
   line-height: 16px;
 }
 
 .about {
-  width: 95%;
-  border: 1px solid black;
-  border-radius: 10px;
+  width: 85%;
+  border: 3px solid #CDE8D8;
+  border-radius: 75px;
   margin-bottom: 40px;
-  padding: 40px;
+  padding: 60px 102px 60px 72px;
 }
 
 .header {
   font-size: 1.3em;
   margin: 0;
   padding: 0 0 20px 0;
-  color: var(--grey-text);
+  color: var(--text);
 }
 
 .aboutHackaton {
