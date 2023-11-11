@@ -24,4 +24,4 @@
 Напиши здесь инструкцию. 
 
 ## Ссылка на деплой
-[название ссылки](https://)
+[Click!](memory-game-nine-gamma.vercel.app)
