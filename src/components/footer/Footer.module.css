@@ -3,11 +3,18 @@
   padding: 79px 0 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: var(--disabled-text);
   font-size: 14px;
   line-height: 16px;
+}
+
+.about {
+  width: 95%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 40px;
 }
 
 .header {
@@ -17,39 +24,17 @@
   color: var(--grey-text);
 }
 
-.credits {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
+.aboutHackaton {
+  padding-bottom: 40px;
 }
 
-.credits_header {
-  font-size: 1.3em;
-  margin: 0;
-  padding: 0 0 0 0;
+.projectLink {
+  padding-top: 50px;
 }
 
 .link {
   color: black;
   text-decoration: none;
-}
-
-.links {
-  width: calc(100% - 140px);
-  max-width: 1140px;
-
-  box-sizing: border-box;
-
-  display: grid;
-  justify-content: center;
-  gap: 20px;
-  grid-template-columns: repeat(3, min-content);
-  grid-template-rows: 1fr; 
-
-  font-size: 1em;
-  margin: 0;
-  padding: 20px 0 0 0;
 }
 
 .item {
@@ -67,20 +52,8 @@
 }
 
 @media screen and (max-width: 425px) {
-
   .footer {
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .line {
-    width: calc(100% - 20px);
-  }
-
-  .links {
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content max-content max-content;
-    justify-items: center;
-    padding-top: 30px;
   }
 }

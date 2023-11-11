@@ -3,21 +3,30 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p className={styles.header}>Memory card game by Team38</p>
-      <p className={styles.item}>Ссылка на репозиторий проекта: <Link className={styles.link} to=''>Memory game</Link></p>
-     
-      <div className={styles.credits}>
-        <p className={styles.credits_header}>Ссылки на профили членов команды</p>
+      <div className={styles.about}>
+        <div className={styles.aboutHackaton}>
+          <p className={styles.header}>Как появилась игра?</p>
+          <p className={styles.item}>Эта игра была создана в рамках благотворительного хакатона для джунов от "Чата джунов" Наташи Давыдовой и НКО "Найди семью".</p>
+        </div>
 
-        <div className={styles.links}>
-          <Link className={styles.link} to='https://github.com/bellabzhu'>Bella</Link>
-          <Link className={styles.link} to='https://github.com/AndersGrunge'>Andrei</Link>
-          <Link className={styles.link} to='https://github.com/Lirmortoch'>Lirmortoch</Link>
+        <div className={styles.credits}>
+          <p className={styles.header}>Команда, работавшая над проектом</p>
+
+          <p className={styles.item}>
+          <Link className={styles.link} to='https://github.com/bellabzhu'>Белла</Link>, <Link className={styles.link} to='https://github.com/AndersGrunge'>Андрей</Link> и <Link className={styles.link} to='https://github.com/Lirmortoch'>Дима</Link>
+          </p>
+
+          <div className={styles.projectLink}>
+            <p className={styles.header}>Ссылка на проект</p>
+            <p className={styles.item}>
+            <Link className={styles.link} to=''>Memory card game</Link>
+              </p>
+          </div>
         </div>
       </div>
 
-      <p className={styles.item}>Все картинки взяты с Freepic</p>
-      <p className={styles.item}>Copyright &copy;&nbsp;{new Date().getFullYear()}</p>
+      <p className={styles.item}>Все картинки взяты с Freepik</p>
+      <p className={styles.item}>&copy;&nbsp;{new Date().getFullYear()}</p>
     </footer>
   );
 };
