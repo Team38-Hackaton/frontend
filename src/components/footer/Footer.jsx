@@ -7,7 +7,7 @@ const Footer = () => {
       <p className={styles.item}>Ссылка на репозиторий проекта: <Link className={styles.link} to=''>Memory game</Link></p>
      
       <div className={styles.credits}>
-        <p className={styles.credits_header}>Ссылки на репозитории членов команды</p>
+        <p className={styles.credits_header}>Ссылки на профили членов команды</p>
 
         <div className={styles.links}>
           <Link className={styles.link} to='https://github.com/bellabzhu'>Bella</Link>
