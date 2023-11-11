@@ -19,7 +19,7 @@ const Footer = () => {
           <div className={styles.projectLink}>
             <p className={styles.header}>Ссылка на проект</p>
             <p className={styles.item}>
-            <Link className={styles.link} to=''>Memory card game</Link>
+            <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>Memory card game</Link>
               </p>
           </div>
         </div>
