@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  padding: 79px 0 20px 0;
+  padding: 80px 0 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
 .about {
   box-sizing: border-box;
   width: 100%;
-  border: 3px solid #CDE8D8;
+  border: 3px solid var(--main);
   border-radius: 75px;
   margin-bottom: 40px;
   padding: 60px 102px 60px 72px;
@@ -28,13 +28,17 @@
   padding-bottom: 40px;
 }
 
-.projectLink {
-  padding-top: 50px;
+.aboutHackaton:last-of-type {
+  padding-bottom: 0;
 }
 
 .link {
-  color: var(--text);
+  color: rgb(147, 147, 211);
   text-decoration: none;
+}
+
+.link:hover {
+  color: rgb(92, 92, 215);
 }
 
 .item {
@@ -47,8 +51,12 @@
   transition: 0.1s linear;
 }
 
-.link:hover {
-  opacity: 0.7;
+.year {
+  margin: 0;
+  padding: 14px 0 0 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--text);
 }
 
 @media screen and (max-width: 425px) {

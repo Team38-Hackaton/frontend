@@ -4,6 +4,8 @@ import Card from '../card/Card';
 const Gameboard = ({cards, handleCardClick}) => {
   return(
     <div className={styles.container}>
+      <div className={styles.super1}></div>
+      <div className={styles.super2}></div>
       <div className={styles.top}>
         <p className={styles.steps}>Ходов: 6</p>
         <button className={styles.restart}>Заново!</button>

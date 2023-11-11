@@ -8,6 +8,7 @@ import Main from './main/Main';
 import NotFound from './notFound/NotFound';
 import Register from './register/Register';
 import Login from './login/Login';
+import Footer from './footer/Footer';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
@@ -84,6 +85,7 @@ function App() {
         <Route path="*" element={ <Navigate to="/error-404" /> }/>
       </Routes>
       </CurrentUserContext.Provider>
+      <Footer />
     </div>
   );
 }

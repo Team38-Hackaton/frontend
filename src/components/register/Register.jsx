@@ -2,13 +2,13 @@ import './Register.css';
 import { Link } from 'react-router-dom';
 import mascot from '../../img/UI/img-login.png';
 import Header from '../header/Header';
-import Footer from '../footer/Footer';
 
-const Register = () => {
+const Register = ({onRegister}) => {
+
   return(
     <>
       <Header />
-      <Link to='/'>К игре</Link>
+
       <section className="container">
           <div className="login-container">
               <div className="circle circle-one"></div>
@@ -29,10 +29,9 @@ const Register = () => {
               </div>
               <div className="circle circle-two"></div>
           </div>
-          <div className="theme-btn-container"></div>
+        <div className="theme-btn-container"></div>
+        <Link to='/'>Вернуться на главную</Link>
       </section>
-
-      <Footer />
     </>
   )
 };

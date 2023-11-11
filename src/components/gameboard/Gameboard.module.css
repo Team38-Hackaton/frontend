@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   max-width: 844px;
   width: 100%;
 }
@@ -48,4 +49,35 @@
   color: white;
   background-color: var(--accent);
   border: solid 2px transparent;
+}
+
+.super1 {
+  position: absolute;
+  left: -67px;
+  top: 190px;
+  background-image: url(../../img/UI/ui-super.png);
+  background-repeat: no-repeat;
+  width: 77px;
+  height: 600px;
+  animation: moveUpDown 5s infinite alternate;
+}
+
+.super2 {
+  position: absolute;
+  right: -87px;
+  bottom: 0px;
+  background-image: url(../../img/UI/ui-super2.png);
+  background-repeat: no-repeat;
+  width: 77px;
+  height: 480px;
+  animation: moveUpDown 5s infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-70px); /* Adjust the distance to move */
+  }
 }

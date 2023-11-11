@@ -2,7 +2,6 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 import mascot from '../../img/UI/img-login.png';
 import Header from '../header/Header';
-import Footer from '../footer/Footer';
 
 const Login = () => {
   
@@ -31,8 +30,6 @@ const Login = () => {
           </div>
           <div className="theme-btn-container"></div>
       </section>
-
-      <Footer />
     </>
   )
 };
