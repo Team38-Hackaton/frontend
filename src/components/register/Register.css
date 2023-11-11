@@ -10,7 +10,6 @@ h1 {
 .container {
   --background: #F7B267;
   --background: white;
-  --color: #000000;
   --primary-color: #F4845F;
   display: flex;
   justify-content: center;
@@ -45,7 +44,7 @@ h1 {
   padding: 14.5px;
   width: 100%;
   margin: 2rem 0;
-  color: var(--color);
+  color: var(--text);
   outline: none;
   background-color: #9191911f;
   border: none;
@@ -68,7 +67,7 @@ h1 {
 
 .login-container form button {
   background-color: var(--primary-color);
-  color: var(--color);
+  color: var(--text);
   display: block;
   padding: 13px;
   border-radius: 5px;
