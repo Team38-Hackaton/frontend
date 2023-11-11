@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return(
-    <header class={styles.container}>
-      Это хедер.
-      <Link to='/profile'>Это ссылка на профиль</Link>
+    <header class={styles.header}>
+
+      <div className={styles.logo}>
+
+      </div>
+
+      <div className={styles.menu}>
+        <div className={styles.avatar}>
+        
+        </div>
+
+        <Link className={styles.button} to='/profile'>Профиль</Link>
+        <Link className={styles.button} to='/logout'>Выход</Link>
+      </div>
     </header>
   )
 };
