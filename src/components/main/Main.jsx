@@ -5,7 +5,7 @@ import Gameboard from '../gameboard/Gameboard';
 
 const Main = () => {
   return(
-    <div class={styles.container}>
+    <div className={styles.container}>
       <Header />
       <Gameboard />
       <Footer />

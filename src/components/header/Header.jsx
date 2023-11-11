@@ -3,16 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return(
-    <header class={styles.header}>
+    <header className={styles.header}>
 
       <div className={styles.logo}>
-        <img src='./logo.png'></img>
+        <img src='./logo.png' alt='Лого проекта'></img>
       </div>
 
       <div className={styles.menu}>
-        <div className={styles.avatar}>
-          
-        </div>
 
         <Link className={styles.button} to='/profile'>В профиль</Link>
         <Link className={styles.button} to='/logout'>Выйти</Link>
