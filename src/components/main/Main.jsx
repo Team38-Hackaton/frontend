@@ -3,12 +3,11 @@ import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import Gameboard from '../gameboard/Gameboard';
 
-const Main = () => {
+const Main = ({cards}) => {
   return(
-    <div class={styles.container}>
-      Ты сейчас на главной странице.
+    <div className={styles.container}>
       <Header />
-      <Gameboard />
+      <Gameboard cards={cards} />
       <Footer />
     </div>
   )

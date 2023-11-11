@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
   return (
-    <div class={styles.container}>
+    <div className={styles.container}>
     Ты сейчас на странице профиля.
       <Header />
       <Link to='/'>Вернуться обратно на главную</Link>

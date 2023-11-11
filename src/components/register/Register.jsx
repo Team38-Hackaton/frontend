@@ -9,27 +9,27 @@ const Register = () => {
     <>
       <Header />
       <Link to='/'>К игре</Link>
-      <section class="container">
-          <div class="login-container">
-              <div class="circle circle-one"></div>
-              <div class="form-container">
-                  <img src={mascot} alt="illustration" class="illustration" />
-                  <h1 class="opacity">РЕГИСТРАЦИЯ</h1>
+      <section className="container">
+          <div className="login-container">
+              <div className="circle circle-one"></div>
+              <div className="form-container">
+                  <img src={mascot} alt="illustration" className="illustration" />
+                  <h1 className="opacity">РЕГИСТРАЦИЯ</h1>
                   <form>
                       <input type="text" placeholder="Имя" />
                       <input type="email" placeholder="Электронная почта" />
                       <input type="password" placeholder="Пароль" />
                       <input type="password" placeholder="Повторите пароль" />
-                      <button class="opacity">Зарегистрироваться</button>
+                      <button className="opacity">Зарегистрироваться</button>
                   </form>
-                  <div class="register-forget opacity">
+                  <div className="register-forget opacity">
                     <p>Уже с нами?</p>
                     <Link to='/login'>Войти</Link>
                   </div>
               </div>
-              <div class="circle circle-two"></div>
+              <div className="circle circle-two"></div>
           </div>
-          <div class="theme-btn-container"></div>
+          <div className="theme-btn-container"></div>
       </section>
 
       <Footer />

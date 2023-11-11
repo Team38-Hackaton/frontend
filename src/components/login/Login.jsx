@@ -10,26 +10,26 @@ const Login = () => {
     <>
       <Header />
       <Link to='/'>К игре</Link>
-      <section class="container">
-          <div class="login-container">
-              <div class="circle circle-one"></div>
-              <div class="form-container">
-                  <img src={mascot} alt="illustration" class="illustration" />
-                  <h1 class="opacity">ВХОД</h1>
+      <section className="container">
+          <div className="login-container">
+              <div className="circle circle-one"></div>
+              <div className="form-container">
+                  <img src={mascot} alt="illustration" className="illustration" />
+                  <h1 className="opacity">ВХОД</h1>
                   <form>
                       <input type="text" placeholder="Имя" />
                       <input type="email" placeholder="Электронная почта" />
                       <input type="password" placeholder="Пароль" />
-                      <button class="opacity">Войти</button>
+                      <button className="opacity">Войти</button>
                   </form>
-                  <div class="register-forget opacity">
+                  <div className="register-forget opacity">
                     <p>Первый раз здесь?</p>
                     <Link to='/register'>Зарегистрироваться</Link>
                   </div>
               </div>
-              <div class="circle circle-two"></div>
+              <div className="circle circle-two"></div>
           </div>
-          <div class="theme-btn-container"></div>
+          <div className="theme-btn-container"></div>
       </section>
 
       <Footer />
