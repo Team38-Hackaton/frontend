@@ -8,7 +8,7 @@ const Profile = () => {
     <div className={styles.container}>
     Ты сейчас на странице профиля.
       <Header />
-      <Link to='/'>Вернуться обратно на главную</Link>
+      <Link to='/'>Вернуться на главную</Link>
       <Footer />
     </div>
   );
