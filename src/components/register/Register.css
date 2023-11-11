@@ -1,32 +1,3 @@
-:root {
-  --background: #F7B267;
-  --background: white;
-  --color: #000000;
-  --primary-color: #F4845F;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "poppins";
-  background: var(--background);
-  color: var(--color);
-  letter-spacing: 1px;
-  transition: background 0.2s ease;
-  -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -ms-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
-}
-
 a {
   text-decoration: none;
   color: var(--color);
@@ -37,10 +8,19 @@ h1 {
 }
 
 .container {
+  --background: #F7B267;
+  --background: white;
+  --color: #000000;
+  --primary-color: #F4845F;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+  background: var(--background);
+  color: var(--color);
 }
 
 .login-container {

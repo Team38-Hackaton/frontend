@@ -1,10 +1,11 @@
-import './Register.css';
+import './Login.css';
 import { Link } from 'react-router-dom';
 import mascot from '../../img/UI/img-login.png';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
-const Register = () => {
+const Login = () => {
+  
   return(
     <>
       <Header />
@@ -14,17 +15,16 @@ const Register = () => {
               <div className="circle circle-one"></div>
               <div className="form-container">
                   <img src={mascot} alt="illustration" className="illustration" />
-                  <h1 className="opacity">РЕГИСТРАЦИЯ</h1>
+                  <h1 className="opacity">ВХОД</h1>
                   <form>
                       <input type="text" placeholder="Имя" />
                       <input type="email" placeholder="Электронная почта" />
                       <input type="password" placeholder="Пароль" />
-                      <input type="password" placeholder="Повторите пароль" />
-                      <button className="opacity">Зарегистрироваться</button>
+                      <button className="opacity">Войти</button>
                   </form>
                   <div className="register-forget opacity">
-                    <p>Уже с нами?</p>
-                    <Link to='/login'>Войти</Link>
+                    <p>Первый раз здесь?</p>
+                    <Link to='/register'>Зарегистрироваться</Link>
                   </div>
               </div>
               <div className="circle circle-two"></div>
@@ -37,4 +37,4 @@ const Register = () => {
   )
 };
 
-export default Register;
+export default Login;
