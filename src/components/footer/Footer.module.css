@@ -27,15 +27,17 @@
 }
 
 .credits {
+  padding-top: 20px;
+}
+
+.links {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: grid;
-  width: calc(100% - 140px);
-  max-width: 1140px;
-  padding-top: 20px;
-  grid-template-columns: max-content auto min-content;
-  grid-template-rows: 1fr;
+  display: flex;
+  
+  /* grid-template-columns: max-content auto min-content;
+  grid-template-rows: 1fr; */
 }
 
 .item {
