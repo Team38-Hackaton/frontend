@@ -2,7 +2,7 @@ import styles from './Gameboard.module.css';
 import Card from '../card/Card';
 import { useState, useEffect } from 'react';
 
-const Gameboard = ({ cardImages }) => {
+const Gameboard = ({ cardImages, setIsModalOpened }) => {
 
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -37,13 +37,17 @@ const Gameboard = ({ cardImages }) => {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
         setCards(prevCards => {
-          return prevCards.map(card => {
+          const updatedCards = prevCards.map(card => {
             if (card.src === choiceOne.src) {
-              return {...card, matched: true }
+              return { ...card, matched: true };
             } else {
               return card;
             }
-          })
+          });
+          if (updatedCards.every(card => card.matched)) {
+            setIsModalOpened(true);
+          }
+          return updatedCards;
         })
         resetTurn();
       } else {

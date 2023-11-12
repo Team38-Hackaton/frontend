@@ -1,0 +1,143 @@
+.bg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(81, 65, 115, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.container {
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23px;
+  /* border: 2px solid #CAC6EE; */
+  background: #FFF;
+  box-shadow: 0px 0px 56px 20px rgba(174, 47, 161, 0.2);
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+  z-index: 25;
+}
+
+.container h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  color: var(--accent);
+  text-align: center;
+  font-family: Newland;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 25;
+}
+
+.admire {
+  margin: 0;
+  padding: 10px 0 0 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 25;
+}
+
+.continue {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 25;
+}
+
+.help {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 25;
+}
+
+.love {
+  margin: 0;
+  padding: 32px 0 0 0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  z-index: 25;
+}
+
+.line {
+  margin: 32px 0;
+  max-width: 450px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--text);
+  z-index: 25;
+}
+
+.link {
+  color: rgb(147, 147, 211);
+  text-decoration: none;
+  z-index: 25;
+}
+
+.link:hover {
+  color: rgb(92, 92, 215);
+}
+
+button {
+  margin-top: 32px;
+  display: flex;
+  height: 42px;
+  padding: 20px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid 2px var(--main);
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  transition: 0.3s;
+  z-index: 25;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--accent);
+  border: solid 2px transparent;
+}
