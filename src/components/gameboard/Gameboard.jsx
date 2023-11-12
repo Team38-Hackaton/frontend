@@ -1,8 +1,8 @@
 import styles from './Gameboard.module.css';
 import Card from '../card/Card';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const Gameboard = ({ cardImages }) => {
+const Gameboard = ({ cardImages, setIsModalOpened }) => {
 
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -10,14 +10,32 @@ const Gameboard = ({ cardImages }) => {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
 
-  const shuffleCards = () => {
+  const boardRef = useRef(null);
+
+  const initialShuffle = () => {
     const shuffledCards = [...cardImages, ...cardImages]
-      .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }));
+    .sort(() => Math.random() - 0.5)
+    .map((card) => ({ ...card, id: Math.random() }));
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
+  }
+
+  const shuffleCards = () => {
+    boardRef.current.style.opacity = 0;
+    setTimeout(() => {
+      const shuffledCards = [...cardImages, ...cardImages]
+        .sort(() => Math.random() - 0.5)
+        .map((card) => ({ ...card, id: Math.random() }));
+        setChoiceOne(null);
+        setChoiceTwo(null);
+        setCards(shuffledCards);
+        setTurns(0);
+    }, 500);
+    setTimeout(() => {
+      boardRef.current.style.opacity = 1;
+    }, 1000);
   };
 
   const handleChoice = (card) => {
@@ -37,13 +55,17 @@ const Gameboard = ({ cardImages }) => {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
         setCards(prevCards => {
-          return prevCards.map(card => {
+          const updatedCards = prevCards.map(card => {
             if (card.src === choiceOne.src) {
-              return {...card, matched: true }
+              return { ...card, matched: true };
             } else {
               return card;
             }
-          })
+          });
+          if (updatedCards.every(card => card.matched)) {
+            setIsModalOpened(true);
+          }
+          return updatedCards;
         })
         resetTurn();
       } else {
@@ -53,7 +75,7 @@ const Gameboard = ({ cardImages }) => {
   }, [choiceOne, choiceTwo]);
 
   useEffect(() => {
-    shuffleCards();
+    initialShuffle();
   }, []);
 
 
@@ -65,7 +87,7 @@ const Gameboard = ({ cardImages }) => {
         <p className={styles.steps}>Ходов: {turns}</p>
         <button className={styles.restart} onClick={shuffleCards}>Заново!</button>
       </div>
-      <div className={styles.board}>
+      <div className={styles.board} ref={boardRef}>
         {cards.map((card, index) => (
           <Card
             key={index} 

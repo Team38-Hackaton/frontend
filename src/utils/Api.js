@@ -1,59 +1,38 @@
 import { apiConfig } from "./constants";
 import { checkResponse } from './checkResponse';
 
-export const getUserInfo = async () => {
-  const res = await fetch(apiConfig.user, {
-    headers: apiConfig.headers,
-    credentials: 'include',
+export const getUserInfo = async (token) => {
+  const res = await fetch(apiConfig.main, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization" : `Bearer ${token}`
+    }
   });
   return checkResponse(res);
 };
 
-export const register = async ({ name, email, password }) => {
-  const res = await fetch(apiConfig.signUp, {
+export const register = async ({ username, email, password }) => {
+  const res = await fetch(apiConfig.register, {
     method: 'POST',
     headers: apiConfig.headers,
     body: JSON.stringify({
-      name: `${name}`,
-      password: `${password}`,
+      name: `${username}`,
+      psw: `${password}`,
       email: `${email}`
     }),
-    credentials: 'include',
   });
   return checkResponse(res);
 };
 
 export const login = async ({ email, password }) => {
-  const res = await fetch(apiConfig.signIn, {
+  const res = await fetch(apiConfig.login, {
     method: 'POST',
     headers: apiConfig.headers,
     body: JSON.stringify({
-      password: `${password}`,
+      psw: `${password}`,
       email: `${email}`
     }),
-    credentials: 'include',
   });
   return checkResponse(res);
-};
-
-export const logout = async () => {
-  const res = await fetch(apiConfig.signOut, {
-    method: 'DELETE',
-    headers: apiConfig.headers,
-    credentials: 'include',
-  });
-  return checkResponse(res);
-};
-
-export const editProfile = async ({ name, email }) => {
-  const res = await fetch(apiConfig.user, {
-    method: 'PATCH',
-    headers: apiConfig.headers,
-    body: JSON.stringify({
-      name: `${name}`,
-      email: `${email}`
-    }),
-    credentials: 'include',
-  });
-  return checkResponse(res); 
 };

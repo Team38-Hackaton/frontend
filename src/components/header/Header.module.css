@@ -57,8 +57,26 @@
 
 .button:hover {
   color: white;
-  background-color: crimson;
-  background-color: #E26BAD;
+  background-color: #F99328;
+}
+
+.logout {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  box-sizing: border-box;
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.logout:hover {
+  color: white;
   background-color: #F99328;
 }
 

@@ -9,6 +9,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   width: 100%;
+  transition: opacity 0.3s ease;
 }
 
 .top {
@@ -25,6 +26,7 @@
 }
 
 .restart {
+  margin: 0;
   display: flex;
   height: 42px;
   padding: 20px 40px;
@@ -55,22 +57,22 @@
 .super1 {
   position: absolute;
   left: -67px;
-  top: 190px;
-  background-image: url(../../img/UI/ui-super.png);
+  top: 100px;
+  background-image: url(../../img/UI/ui-left.png);
   background-repeat: no-repeat;
   width: 77px;
-  height: 600px;
+  height: 704px;
   animation: moveUpDown 5s infinite alternate;
 }
 
 .super2 {
   position: absolute;
   right: -87px;
-  bottom: 0px;
-  background-image: url(../../img/UI/ui-super2.png);
+  bottom: -20px;
+  background-image: url(../../img/UI/ui-right.png);
   background-repeat: no-repeat;
   width: 77px;
-  height: 480px;
+  height: 308px;
   animation: moveUpDown 5s infinite alternate;
 }
 
@@ -79,6 +81,6 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-70px); /* Adjust the distance to move */
+    transform: translateY(-70px);
   }
 }

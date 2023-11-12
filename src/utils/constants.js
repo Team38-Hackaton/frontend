@@ -1,4 +1,4 @@
-const BASE_URL = '';
+const BASE_URL = 'https://flask-andersgrunge.cloud.okteto.net';
 
 export const apiConfig = {
   headers: {
@@ -7,6 +7,5 @@ export const apiConfig = {
   },
   login: `${BASE_URL}/login`,
   register: `${BASE_URL}/register`,
-  logout: `${BASE_URL}/logout`,
-  profile: `${BASE_URL}/profile`,
+  main: `${BASE_URL}`,
 };
