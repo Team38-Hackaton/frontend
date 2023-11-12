@@ -20,11 +20,11 @@ const Register = ({onRegister}) => {
                       <input type="email" placeholder="Электронная почта" />
                       <input type="password" placeholder="Пароль" />
                       <input type="password" placeholder="Повторите пароль" />
-                      <button className="opacity">Зарегистрироваться</button>
+                      <button>Зарегистрироваться</button>
                   </form>
                   <div className="register-forget opacity">
                     <p>Уже с нами?</p>
-                    <Link to='/login'>Войти</Link>
+                    <Link className="link" to='/login'>Войти</Link>
                   </div>
               </div>
               {/* <div className="circle circle-two"></div> */}
