@@ -24,3 +24,12 @@
        url(./Inter-700.woff) format("woff");
   font-weight: 700;
 }
+
+@font-face {
+  font-family: 'Newland';
+  font-style: normal;
+  font-display: swap;
+  src: url(./Newland.woff2) format("woff2"),
+       url(./Newland.woff) format("woff");
+  font-weight: 400;
+}
