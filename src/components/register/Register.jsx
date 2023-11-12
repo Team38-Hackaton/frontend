@@ -28,7 +28,7 @@ const Register = ({onRegister}) => {
           </div>
         </div>
         <div className="theme-btn-container"></div>
-        <Link to='/'>Вернуться на главную</Link>
+        <Link className='link' to='/'>Вернуться на главную</Link>
       </section>
     </>
   )

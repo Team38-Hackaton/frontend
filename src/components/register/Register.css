@@ -16,8 +16,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 40px 0 0 0;
-  box-sizing: border-box;
-  font-family: "poppins";
+  box-sizing: border-box;  
   background: var(--background);
   color: var(--color);
 }

@@ -8,7 +8,6 @@ const Login = () => {
   return(
     <>
       <Header />
-      <Link to='/'>К игре</Link>
       <section className="container">
           <div className="login-container">
               <div className="form-container">
