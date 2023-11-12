@@ -7,6 +7,5 @@ export const apiConfig = {
   },
   login: `${BASE_URL}/login`,
   register: `${BASE_URL}/register`,
-  logout: `${BASE_URL}/logout`,
-  profile: `${BASE_URL}/profile`,
+  main: `${BASE_URL}`,
 };

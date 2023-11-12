@@ -21,7 +21,7 @@ const WinPopup = ({ setIsModalOpened }) => {
         <div className={styles.line} />
         <p className={styles.help}>А если ты хочешь помочь проявить способности и найти опору тому, кому не хватает поддержки прямо сейчас, загляни в фонд <Link className={styles.link} to=''>“Найди семью”.</Link></p>
         <p className={styles.love}>Жизнь начинается с любви 🧡</p>
-        <button onClick={closeModal} type="button" aria-label="Закрыть окно">OK</button>
+        <button className={styles.close} onClick={closeModal} type="button" aria-label="Закрыть окно">OK</button>
       </div>
     </div>
   )

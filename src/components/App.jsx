@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import { register, login, logout } from '../utils/Api';
-import { useState } from 'react';
+import { getUserInfo, register, login} from '../utils/Api';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Main from './main/Main';
 import NotFound from './notFound/NotFound';
@@ -21,15 +21,13 @@ const cardImages = [
 ]
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [currentUser, setCurrentUser] = useState({ name: '', email: '' });
   const navigate = useNavigate();
 
-  const handleRegister = ({ name, email, password }) => {
-    register({ name, email, password })
+  const handleRegister = ({ username, email, password }) => {
+    register({ username, email, password })
       .then((res) => {
         handleLogin({ email, password })
-        console.log(res);
       })
       .catch(err => console.log(err))
   };
@@ -38,22 +36,27 @@ function App() {
     login({ email, password })
       .then(res => {
         setCurrentUser({ name: res.name, email: res.email });
-        setIsLoggedIn(true);
+        localStorage.setItem('access_token', res.access_token);
         navigate('/');
-        console.log(res)
       })
       .catch(err => console.log(err))
   };
 
   const handleLogout = () => {
-    logout()
-      .then(() => {
-        navigate('/');
-        setCurrentUser({ name: '', email: '' });
-        setIsLoggedIn(false);
-      })
-      .catch(err => console.log(err))
+    localStorage.removeItem('access_token');
+    setCurrentUser({ name: '', email: '' });
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem('access_token');
+    if (!token) return;
+    getUserInfo(token)
+      .then((res) => {
+        console.log(res, 'res')
+        setCurrentUser({ name: res.name, email: res.email });
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className="App">

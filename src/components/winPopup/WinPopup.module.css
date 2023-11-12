@@ -113,7 +113,7 @@
   color: rgb(92, 92, 215);
 }
 
-button {
+.close {
   margin-top: 32px;
   display: flex;
   height: 42px;
@@ -136,7 +136,7 @@ button {
   z-index: 25;
 }
 
-button:hover {
+.close:hover {
   color: white;
   background-color: var(--accent);
   border: solid 2px transparent;
