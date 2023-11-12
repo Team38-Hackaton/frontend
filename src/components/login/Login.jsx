@@ -47,6 +47,7 @@ const Login = ({ onLogin }) => {
               </div>
           </div>
           <div className="theme-btn-container"></div>
+          <Link className='link' to='/'>Вернуться на главную</Link>
       </section>
     </>
   )

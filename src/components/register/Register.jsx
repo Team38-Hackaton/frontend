@@ -41,11 +41,11 @@ const Register = ({onRegister}) => {
           <div className="form-container">
               <img src={mascot} alt="Иллюстрация" className="illustration" />
               <h1 className="opacity">РЕГИСТРАЦИЯ</h1>
-              <form onSubmit={handleSubmit}>
+              <form className="form" onSubmit={handleSubmit}>
                   <input type="text" onChange={handleUsernameChange} placeholder="Имя" name="username" required minLength="2" maxLength="40" value={username}/>
                   <input type="email" onChange={handleEmailChange} placeholder="Электронная почта" name="email" required minLength="4" maxLength="40" value={email}/>
                   <input type="password" onChange={handlePassChange} placeholder="Пароль" required minLength="4" maxLength="40" value={password} />
-                  <button className="opacity">Зарегистрироваться</button>
+                  <button className="opacity btn-reg">Зарегистрироваться</button>
               </form>
               <div className="register-forget opacity">
                 <p>Уже с нами?</p>

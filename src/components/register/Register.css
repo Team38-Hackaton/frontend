@@ -49,6 +49,7 @@ h1 {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .login-container form button {
@@ -57,17 +58,13 @@ h1 {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  
   padding: 13px;
   margin-bottom: 2rem;
-
   background-color: var(--main);
   background-color: transparent;
   border: solid 2px var(--main);
   color: var(--text);
-
   width: 100%;
-  
   font-size: 18px;
   font-weight: 600;
   border-radius: 10px;
@@ -83,45 +80,11 @@ h1 {
   border: solid 2px transparent;
 }
 
-.circle {
-  width: 8rem;
-  height: 8rem;
-  background: var(--primary-color);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  position: absolute;
-}
-
 .illustration {
   position: absolute;
   top: -4.5%;
   right: 14%;
   width: 70%;
-}
-
-.circle-one {
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transform: translate(-45%, -45%);
-  -webkit-transform: translate(-45%, -45%);
-  -moz-transform: translate(-45%, -45%);
-  -ms-transform: translate(-45%, -45%);
-  -o-transform: translate(-45%, -45%);
-}
-
-.circle-two {
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  transform: translate(45%, 45%);
-  -webkit-transform: translate(45%, 45%);
-  -moz-transform: translate(45%, 45%);
-  -ms-transform: translate(45%, 45%);
-  -o-transform: translate(45%, 45%);
 }
 
 .register-forget {
@@ -130,6 +93,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+
 .opacity {
   opacity: 0.6;
 }
