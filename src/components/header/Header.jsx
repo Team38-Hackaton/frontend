@@ -12,7 +12,6 @@ const Header = () => {
       </div>
       <div className={styles.menu}>
         <Link className={styles.button} to='/register'>Рег(врем)</Link>
-        <Link className={styles.button} to='/profile'>В профиль</Link>
         <Link className={styles.button} to='/logout'>Выйти</Link>
       </div>
     </header>

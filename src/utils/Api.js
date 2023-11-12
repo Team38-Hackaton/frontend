@@ -10,12 +10,12 @@ export const getUserInfo = async () => {
 };
 
 export const register = async ({ name, email, password }) => {
-  const res = await fetch(apiConfig.signUp, {
+  const res = await fetch(apiConfig.register, {
     method: 'POST',
     headers: apiConfig.headers,
     body: JSON.stringify({
       name: `${name}`,
-      password: `${password}`,
+      psw: `${password}`,
       email: `${email}`
     }),
     credentials: 'include',
@@ -24,7 +24,7 @@ export const register = async ({ name, email, password }) => {
 };
 
 export const login = async ({ email, password }) => {
-  const res = await fetch(apiConfig.signIn, {
+  const res = await fetch(apiConfig.login, {
     method: 'POST',
     headers: apiConfig.headers,
     body: JSON.stringify({
@@ -37,23 +37,10 @@ export const login = async ({ email, password }) => {
 };
 
 export const logout = async () => {
-  const res = await fetch(apiConfig.signOut, {
+  const res = await fetch(apiConfig.logout, {
     method: 'DELETE',
     headers: apiConfig.headers,
     credentials: 'include',
   });
   return checkResponse(res);
-};
-
-export const editProfile = async ({ name, email }) => {
-  const res = await fetch(apiConfig.user, {
-    method: 'PATCH',
-    headers: apiConfig.headers,
-    body: JSON.stringify({
-      name: `${name}`,
-      email: `${email}`
-    }),
-    credentials: 'include',
-  });
-  return checkResponse(res); 
 };

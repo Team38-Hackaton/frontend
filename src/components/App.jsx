@@ -3,7 +3,6 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import { register, login, logout } from '../utils/Api';
 import { useState } from 'react';
 import './App.css';
-import Profile from './profile/Profile';
 import Main from './main/Main';
 import NotFound from './notFound/NotFound';
 import Register from './register/Register';
@@ -28,8 +27,9 @@ function App() {
 
   const handleRegister = ({ name, email, password }) => {
     register({ name, email, password })
-      .then(() => {
+      .then((res) => {
         handleLogin({ email, password })
+        console.log(res);
       })
       .catch(err => console.log(err))
   };
@@ -40,6 +40,7 @@ function App() {
         setCurrentUser({ name: res.name, email: res.email });
         setIsLoggedIn(true);
         navigate('/');
+        console.log(res)
       })
       .catch(err => console.log(err))
   };
@@ -61,7 +62,6 @@ function App() {
         <Route exact path='/' element={
           <Main onLogout={handleLogout} cardImages={cardImages} />} 
         />
-        <Route path='/profile' element={<Profile onLogout={handleLogout} />} />
         <Route path='/register' element={<Register onRegister={handleRegister} onLogout={handleLogout} />} />
         <Route path='/login' element={<Login onLogin={handleLogin} onLogout={handleLogout} />} />
         <Route path="/error-404" element={<NotFound />} />
