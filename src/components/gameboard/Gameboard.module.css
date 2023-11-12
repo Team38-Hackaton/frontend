@@ -9,6 +9,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   width: 100%;
+  transition: opacity 0.3s ease;
 }
 
 .top {
@@ -82,6 +83,6 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-70px); /* Adjust the distance to move */
+    transform: translateY(-70px);
   }
 }
