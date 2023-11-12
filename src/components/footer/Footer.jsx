@@ -21,7 +21,7 @@ const Footer = () => {
         <div className={styles.aboutHackaton}>
           <p className={styles.header}>Ссылки</p>
           <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>Деплой</Link><span> и </span>
-          <Link className={styles.link} to='https://memory-game-nine-gamma.vercel.app'>GitHub</Link>
+          <Link className={styles.link} to='https://github.com/Team38-Hackaton'>GitHub</Link>
         </div>
       </div>
       <p className={styles.item}>P.S. иллюстрации взяты с Freepik</p>
