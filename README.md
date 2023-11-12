@@ -58,4 +58,4 @@ npm start
 ```
 
 ## Ссылка на деплой
-[Click!](memory-game-nine-gamma.vercel.app)
+[Click!](https://memory-game-nine-gamma.vercel.app)
