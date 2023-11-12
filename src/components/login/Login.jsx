@@ -30,10 +30,8 @@ const Login = ({ onLogin }) => {
   return(
     <>
       <Header />
-      <Link to='/'>К игре</Link>
       <section className="container">
           <div className="login-container">
-              <div className="circle circle-one"></div>
               <div className="form-container">
                   <img src={mascot} alt="illustration" className="illustration" />
                   <h1 className="opacity">ВХОД</h1>
@@ -44,10 +42,9 @@ const Login = ({ onLogin }) => {
                   </form>
                   <div className="register-forget opacity">
                     <p>Первый раз здесь?</p>
-                    <Link to='/register'>Зарегистрироваться</Link>
+                    <Link className="link" to='/register'>Зарегистрироваться</Link>
                   </div>
               </div>
-              <div className="circle circle-two"></div>
           </div>
           <div className="theme-btn-container"></div>
       </section>
