@@ -12,11 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  transition: background 0.2s ease;
-  -webkit-transition: background 0.2s ease;
-  -moz-transition: background 0.2s ease;
-  -ms-transition: background 0.2s ease;
-  -o-transition: background 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
